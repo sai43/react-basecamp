@@ -1,16 +1,21 @@
 import React from 'react';
-import Post from './components/posts/posts'
-import PrimarySearchAppBar from './shared/components/AppBar';
-import Container from '@material-ui/core/Container';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from './components/home/Home';
+import About from './components/about/About';
+import Nav from './components/nav/Nav';
 
 function App() {
   return (
-    <div className="App">
-        <PrimarySearchAppBar />
-        <Container maxWidth="lg">
-          <Post />
-        </Container>
-    </div>
+    <Router>
+        <div className="App">
+          <Nav />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/about" component={About} />
+          </Switch>
+        </div>
+    </Router>
+
   );
 }
 

@@ -22,36 +22,9 @@
     <title>React App</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    
-    <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.3/mobile-detect.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
-
-  <!-- <script src="mobile-detect.js"></script> -->
- 
-
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-
-    <div id="wrapper">
-      <button id="detect-btn">Detect Device Info</button>
-    </div>
-
-      <script>
-        $('#detect-btn').click(function(){
-          var detector = new MobileDetect(window.navigator.userAgent);
-          console.log("Mobile: " + detector.mobile());
-          console.log("Phone: " + detector.phone());
-          console.log("Tablet: " + detector.tablet());
-          console.log("OS: " + detector.os());
-          console.log("User Agent: " + detector.userAgent());
-        });
-      </script>
-
   </body>
 </html>
