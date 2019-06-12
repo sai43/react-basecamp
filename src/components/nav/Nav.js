@@ -94,6 +94,9 @@ function Nav() {
             <Button>
               <Link to="/about">About</Link>
             </Button>
+            <Button>
+                <Link to="/items">Items</Link>
+            </Button>
         </Toolbar>
       </AppBar>
     </div>
