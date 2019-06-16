@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { Link } from "react-router-dom";
 
 function Items() {
     useEffect(() => {
@@ -19,7 +20,9 @@ function Items() {
         <div>
             <h1>Items List</h1>
             {items.map((item) => ( 
-                <h1 key={item.itemId}>{item.item.name}</h1>        
+                <h1 key={item.itemId}>
+                    <Link to={`/items/${item.itemId}`}>{item.item.name}</Link>
+                </h1>        
             ))}
         </div>
     );

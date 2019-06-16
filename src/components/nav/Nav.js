@@ -9,8 +9,12 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles(theme => ({
+  primaryColor: {
+    color: 'red',
+    background: '#94944c'
+  },
   grow: {
-    flexGrow: 1
+    flexGrow: 2
   },
   menuButton: {
     marginRight: theme.spacing(2)
@@ -75,7 +79,7 @@ function Nav() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.primaryColor} >
         <Toolbar>
           <IconButton
             edge="start"
@@ -86,7 +90,7 @@ function Nav() {
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            Blog App
+            Blog
           </Typography>
             <Button>
               <Link to="/">Home</Link>
@@ -96,6 +100,9 @@ function Nav() {
             </Button>
             <Button>
                 <Link to="/items">Items</Link>
+            </Button>
+            <Button>
+                <Link to="/comments">comments</Link>
             </Button>
         </Toolbar>
       </AppBar>

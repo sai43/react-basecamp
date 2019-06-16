@@ -1,9 +1,14 @@
-import React from 'react';
+import React, {useState } from 'react';
 
 function About() {
+  const [showDiv] = useState(false);
   return (
         <div>
-            <h1>About Page</h1>
+          { showDiv === false ?
+          <h1>About Page  - true </h1>
+          : <h1> About Page - false </h1>
+          }
+            
         </div>
   );
 }
